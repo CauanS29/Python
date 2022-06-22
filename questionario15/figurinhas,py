@@ -1,0 +1,47 @@
+numeroFigurinhas = int(input()) 
+
+
+def par_Impar(numero): 
+
+    resultado = False 
+
+    if numero%2 == 0 : 
+
+      resultado = True 
+
+    return resultado 
+
+listaJoao = [] 
+listaMaria = [] 
+
+for i in range(0,numeroFigurinhas): 
+
+    figurinhas = int(input()) 
+
+    if par_Impar(figurinhas): 
+        listaJoao.append(figurinhas) 
+
+    else : 
+        listaMaria.append(figurinhas) 
+
+
+def tiraRepetidos(lista): 
+
+    listaQualuqer = [] 
+
+    for i in lista : 
+
+        if i not in listaQualuqer: 
+            listaQualuqer.append(i) 
+
+    return listaQualuqer 
+
+listaFinalJoao = sum(tiraRepetidos(listaJoao))
+listaFinalMaria = sum(tiraRepetidos(listaMaria)) 
+
+listaMaior = max(listaFinalJoao, listaFinalMaria) 
+
+print(len(listaJoao)) 
+print(len(listaMaria)) 
+print(listaMaior)
+

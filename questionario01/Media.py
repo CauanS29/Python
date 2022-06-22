@@ -1,0 +1,5 @@
+notaA = float(input("Digite a primeira nota:"))
+notaB = float(input("Digite a segunda nota:"))
+notaC = float(input("Digite a terceira nota:"))
+media = "%.1f"% ((notaA * 2 + notaB * 3 + notaC * 5)/10)
+print ("MEDIA =", media)
